@@ -111,7 +111,7 @@ spec:
                                     url("${entry.getKey()}")
                                     credentials('git_read')
                                 } 
-                                branch ('\PMIDC-Upgrade-Dev')
+                                branch ('PMIDC-Upgrade-Dev')
                                 scriptPath('Jenkinsfile')
                                 extensions { }
                             }
