@@ -105,7 +105,8 @@ spec:
 
                                 String workDir = buildConfig.getWorkDir().replaceFirst(getCommonBasePath(buildConfig.getWorkDir(), buildConfig.getDockerFile()), "./")
                                 String image = null;
-                                if(scmVars.BRANCH.equalsIgnoreCase("master")) {
+                               // if(scmVars.BRANCH.equalsIgnoreCase("master")) {
+                               if(scmVars.BRANCH.equalsIgnoreCase("PMIDC-Upgrade-Dev")) {
                                   image = "${REPO_NAME}/${buildConfig.getImageName()}:v${scmVars.VERSION}-${scmVars.ACTUAL_COMMIT}-${env.BUILD_NUMBER}";
                                 } else {
                                   image = "${REPO_NAME}/${buildConfig.getImageName()}:${scmVars.BRANCH}-${scmVars.ACTUAL_COMMIT}-${env.BUILD_NUMBER}";
