@@ -93,7 +93,7 @@ spec:
                         description('') 
                         branch('')      
                         useRepository('')                     
-                        defaultValue('origin/PMIDC-Upgrade-Dev') 
+                        defaultValue('origin/master') 
                         branchFilter('.*')
                         tagFilter('*')
                         sortMode('ASCENDING_SMART')
@@ -111,7 +111,7 @@ spec:
                                     url("${entry.getKey()}")
                                     credentials('git_read')
                                 } 
-                                branch ('PMIDC-Upgrade-Dev')
+                                branch ('\${BRANCH}')
                                 scriptPath('Jenkinsfile')
                                 extensions { }
                             }
