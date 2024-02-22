@@ -91,9 +91,9 @@ spec:
                         name('BRANCH')
                         type('PT_BRANCH_TAG')
                         description('') 
-                        branch('')      
+                        branch('PMIDC-Upgrade-Dev')      
                         useRepository('')                     
-                        defaultValue('origin/master') 
+                        defaultValue('origin/PMIDC-Upgrade-Dev') 
                         branchFilter('.*')
                         tagFilter('*')
                         sortMode('ASCENDING_SMART')
@@ -111,7 +111,7 @@ spec:
                                     url("${entry.getKey()}")
                                     credentials('git_read')
                                 } 
-                                branch ('\${BRANCH}')
+                                branch ('PMIDC-Upgrade-Dev')
                                 scriptPath('Jenkinsfile')
                                 extensions { }
                             }
